@@ -1,13 +1,11 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IsokoStar Ltd - IT Solutions & Networking Specialists</title>
+    <title>IsokoStar Ltd - Networking Solutions & IT Infrastructure</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0056b3;
@@ -17,93 +15,82 @@
             --dark: #212529;
             --gray: #6c757d;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background-color: #ffffff;
             overflow-x: hidden;
         }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
+
         /* Header Styles */
         header {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
-            top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
         }
-        
-        header.scrolled {
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-        
+
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
         }
-        
+
         .logo img {
             height: 50px;
             margin-right: 10px;
         }
-        
-        .logo h1 {
+
+        .logo-text h1 {
             font-size: 1.5rem;
             color: var(--primary);
             font-weight: 700;
         }
-        
-        .logo span {
-            color: var(--accent);
+
+        .logo-text span {
+            font-size: 0.8rem;
+            color: var(--gray);
+            display: block;
         }
-        
+
         nav ul {
             display: flex;
             list-style: none;
         }
-        
+
         nav ul li {
-            margin-left: 30px;
+            margin-left: 2rem;
         }
-        
+
         nav ul li a {
             text-decoration: none;
             color: var(--dark);
-            font-weight: 600;
-            font-size: 1rem;
+            font-weight: 500;
             transition: color 0.3s;
             position: relative;
         }
-        
+
         nav ul li a:hover {
             color: var(--primary);
         }
-        
+
         nav ul li a::after {
             content: '';
             position: absolute;
@@ -114,205 +101,156 @@
             left: 0;
             transition: width 0.3s;
         }
-        
+
         nav ul li a:hover::after {
             width: 100%;
         }
-        
+
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
             font-size: 1.5rem;
-            color: var(--primary);
+            color: var(--dark);
             cursor: pointer;
         }
-        
+
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
             color: white;
-            padding: 180px 0 100px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            padding: 0 5%;
         }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80') center/cover no-repeat;
-            opacity: 0.2;
-            z-index: 0;
-        }
-        
+
         .hero-content {
-            position: relative;
-            z-index: 1;
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 1rem;
             font-weight: 700;
         }
-        
+
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
+            margin-bottom: 2rem;
         }
-        
+
         .btn {
             display: inline-block;
-            padding: 12px 30px;
             background-color: var(--accent);
             color: white;
-            text-decoration: none;
+            padding: 0.8rem 2rem;
             border-radius: 50px;
-            font-weight: 600;
+            text-decoration: none;
+            font-weight: 500;
             transition: all 0.3s;
             border: 2px solid var(--accent);
         }
-        
+
         .btn:hover {
             background-color: transparent;
             color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        
+
         .btn-outline {
             background-color: transparent;
             color: white;
             border: 2px solid white;
-            margin-left: 15px;
+            margin-left: 1rem;
         }
-        
+
         .btn-outline:hover {
             background-color: white;
-            color: var(--primary);
+            color: var(--dark);
         }
-        
+
         /* About Section */
         .section {
-            padding: 100px 0;
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
-        
+
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 3rem;
         }
-        
+
         .section-title h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: var(--secondary);
             position: relative;
             display: inline-block;
-            padding-bottom: 15px;
         }
-        
+
         .section-title h2::after {
             content: '';
             position: absolute;
-            width: 70px;
+            width: 50%;
             height: 3px;
             background: var(--accent);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: -10px;
+            left: 25%;
         }
-        
-        .section-title p {
-            color: var(--gray);
-            max-width: 700px;
-            margin: 15px auto 0;
-        }
-        
+
         .about-content {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
+            gap: 3rem;
         }
-        
+
         .about-text {
             flex: 1;
-            min-width: 300px;
         }
-        
+
         .about-text h3 {
             font-size: 1.8rem;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
         }
-        
+
         .about-text p {
-            margin-bottom: 15px;
+            margin-bottom: 1.5rem;
             color: var(--gray);
         }
-        
-        .about-features {
-            margin-top: 30px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .feature-item {
-            padding: 20px;
-            background-color: var(--light);
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .feature-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-item i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        
-        .feature-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-        
+
         .about-image {
             flex: 1;
-            min-width: 300px;
-            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .about-image img {
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            height: auto;
+            transition: transform 0.5s;
         }
-        
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
         /* Services Section */
         .services {
             background-color: var(--light);
         }
-        
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 2rem;
         }
-        
+
         .service-card {
             background-color: white;
             border-radius: 10px;
@@ -320,413 +258,387 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .service-img {
             height: 200px;
             overflow: hidden;
         }
-        
+
         .service-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
-        
+
         .service-card:hover .service-img img {
             transform: scale(1.1);
         }
-        
+
         .service-content {
-            padding: 25px;
+            padding: 1.5rem;
         }
-        
+
         .service-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+            font-size: 1.3rem;
             color: var(--primary);
+            margin-bottom: 0.5rem;
         }
-        
+
         .service-content p {
             color: var(--gray);
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
         }
-        
+
         .read-more {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
             display: inline-flex;
             align-items: center;
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s;
         }
-        
+
         .read-more i {
             margin-left: 5px;
             transition: transform 0.3s;
         }
-        
-        .read-more:hover {
-            color: var(--accent);
-        }
-        
+
         .read-more:hover i {
             transform: translateX(5px);
         }
-        
+
         /* Products Slider */
-        .products {
+        .products-slider {
             position: relative;
             overflow: hidden;
+            padding: 2rem 0;
         }
-        
-        .products-slider {
+
+        .slider-container {
             display: flex;
             transition: transform 0.5s ease;
-            padding: 20px 0;
         }
-        
+
+        .slide {
+            min-width: 100%;
+            padding: 0 1rem;
+        }
+
         .product-card {
-            min-width: 300px;
-            margin: 0 15px;
             background-color: white;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
+            text-align: center;
+            padding: 2rem;
+            margin: 0 1rem;
         }
-        
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
+
         .product-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .product-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .product-info {
-            padding: 20px;
-        }
-        
-        .product-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-        
-        .product-info p {
-            color: var(--gray);
-            margin-bottom: 15px;
-        }
-        
-        .product-price {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-        
-        .slider-controls {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        
-        .slider-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--light);
-            border: none;
-            margin: 0 10px;
-            cursor: pointer;
+            height: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-card h3 {
             font-size: 1.2rem;
             color: var(--primary);
-            transition: all 0.3s;
+            margin-bottom: 0.5rem;
         }
-        
-        .slider-btn:hover {
-            background-color: var(--primary);
-            color: white;
+
+        .product-card p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
-        
+
+        .price {
+            font-size: 1.3rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .slider-dot.active {
+            background-color: var(--accent);
+        }
+
         /* Clients Section */
         .clients {
             background-color: var(--light);
         }
-        
+
         .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .client-logo {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 30px;
-        }
-        
-        .client-logo {
-            max-width: 150px;
+            height: 100px;
             filter: grayscale(100%);
             opacity: 0.7;
             transition: all 0.3s;
         }
-        
+
         .client-logo:hover {
-            filter: grayscale(0);
+            filter: grayscale(0%);
             opacity: 1;
         }
-        
+
+        .client-logo img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
         /* Contact Section */
         .contact-content {
             display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
+            gap: 3rem;
         }
-        
+
         .contact-info {
             flex: 1;
-            min-width: 300px;
         }
-        
+
         .contact-info h3 {
             font-size: 1.8rem;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
         }
-        
-        .contact-info p {
-            margin-bottom: 30px;
-            color: var(--gray);
-        }
-        
+
         .contact-details {
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
         }
-        
-        .contact-item i {
-            font-size: 1.2rem;
-            color: var(--primary);
-            margin-right: 15px;
-            margin-top: 5px;
+
+        .contact-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
         }
-        
+
         .contact-text h4 {
             font-size: 1.1rem;
-            margin-bottom: 5px;
             color: var(--dark);
+            margin-bottom: 0.3rem;
         }
-        
-        .contact-text a {
+
+        .contact-text p, .contact-text a {
             color: var(--gray);
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .contact-text a:hover {
             color: var(--primary);
         }
-        
+
+        .contact-form {
+            flex: 1;
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #e05d00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 3rem 5% 1rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: -8px;
+            left: 0;
+        }
+
+        .footer-col p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
         .social-links {
             display: flex;
-            gap: 15px;
+            gap: 1rem;
         }
-        
+
         .social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            background-color: var(--light);
-            color: var(--primary);
-            font-size: 1.2rem;
-            transition: all 0.3s;
+            color: white;
+            transition: background-color 0.3s;
         }
-        
+
         .social-links a:hover {
-            background-color: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        .contact-form {
-            flex: 1;
-            min-width: 300px;
-            background-color: var(--light);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: var(--primary);
-            outline: none;
-        }
-        
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--secondary);
-            color: white;
-            padding: 70px 0 0;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-        
-        .footer-col h3 {
-            font-size: 1.3rem;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
             background-color: var(--accent);
         }
-        
-        .footer-col p {
-            margin-bottom: 20px;
-            opacity: 0.8;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 15px;
-        }
-        
-        .footer-links a {
-            color: white;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .footer-links a:hover {
-            opacity: 1;
-            color: var(--accent);
-            transform: translateX(5px);
-        }
-        
+
         .footer-bottom {
             text-align: center;
-            padding: 20px 0;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .footer-bottom p {
             opacity: 0.7;
             font-size: 0.9rem;
         }
-        
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
-            z-index: 999;
-        }
-        
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .back-to-top:hover {
-            background-color: var(--accent);
-            transform: translateY(-5px);
-        }
-        
+
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.4rem;
+            .about-content, .contact-content {
+                flex-direction: column;
             }
-            
-            .section-title h2 {
-                font-size: 2rem;
+
+            .about-image, .about-text, .contact-info, .contact-form {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
             }
         }
-        
+
         @media (max-width: 768px) {
             .header-container {
-                padding: 15px;
+                padding: 1rem;
             }
-            
+
             nav {
                 position: fixed;
                 top: 80px;
@@ -735,99 +647,81 @@
                 height: calc(100vh - 80px);
                 background-color: white;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s;
+                transition: left 0.3s;
                 z-index: 999;
             }
-            
+
             nav.active {
                 left: 0;
             }
-            
+
             nav ul {
                 flex-direction: column;
-                padding: 30px;
+                padding: 2rem;
             }
-            
+
             nav ul li {
-                margin: 15px 0;
+                margin: 1rem 0;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
-            
-            .hero {
-                padding: 150px 0 80px;
-            }
-            
+
             .hero h1 {
                 font-size: 2rem;
             }
-            
+
             .hero p {
                 font-size: 1rem;
             }
-            
+
             .btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
+                display: block;
+                width: 100%;
+                margin-bottom: 1rem;
             }
-            
-            .section {
-                padding: 70px 0;
-            }
-            
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .hero-btns {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-            }
-            
+
             .btn-outline {
                 margin-left: 0;
             }
-            
-            .about-features {
-                grid-template-columns: 1fr;
+
+            .section {
+                padding: 3rem 1rem;
             }
-            
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo-text h1 {
+                font-size: 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
             .product-card {
-                min-width: 250px;
+                padding: 1.5rem;
             }
-        }
-        
-        /* Animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-        
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header id="header">
-        <div class="container header-container">
+    <header>
+        <div class="header-container">
             <div class="logo">
-                <img src="https://via.placeholder.com/50x50" alt="IsokoStar Logo">
-                <h1>Isoko<span>Star</span></h1>
+                <img src="https://via.placeholder.com/50x50?text=IS" alt="Logo">
+                <div class="logo-text">
+                    <h1>IsokoStar Ltd</h1>
+                    <span>Networking & IT Solutions</span>
+                </div>
             </div>
-            <nav id="nav">
+            <nav id="main-nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -836,7 +730,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -844,11 +738,11 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-content animate-on-scroll">
-            <h1>Your Trusted IT & Networking Solutions Partner</h1>
-            <p>Specializing in Cisco devices, servers, routers, switches, and power backup solutions for government and private institutions in Rwanda.</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn">Get In Touch</a>
+        <div class="hero-content">
+            <h1>Your Trusted IT Networking Partner</h1>
+            <p>Providing cutting-edge networking solutions, Cisco devices, and IT infrastructure for businesses and government institutions in Rwanda.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Get a Quote</a>
                 <a href="#services" class="btn btn-outline">Our Services</a>
             </div>
         </div>
@@ -856,383 +750,356 @@
 
     <!-- About Section -->
     <section class="section" id="about">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>About IsokoStar</h2>
-                <p>We are a leading IT company in Kigali, Rwanda, specializing in networking solutions and IT infrastructure.</p>
+        <div class="section-title">
+            <h2>About Us</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Leading IT Networking Solutions Provider in Rwanda</h3>
+                <p>IsokoStar Ltd is a premier Information Technology company based in Kigali, Rwanda, specializing in networking solutions and IT infrastructure.</p>
+                <p>We are experts in the supply and installation of Cisco devices including servers, routers, switches, and power backup systems. Our team of certified professionals ensures that your network infrastructure is robust, secure, and optimized for performance.</p>
+                <p>We serve a diverse clientele including government institutions, private organizations, and enterprises across Rwanda, delivering tailored IT solutions that drive business growth.</p>
+                <a href="#contact" class="btn">Contact Us</a>
             </div>
-            <div class="about-content">
-                <div class="about-text animate-on-scroll">
-                    <h3>Delivering Excellence in IT Solutions Since Our Inception</h3>
-                    <p>IsokoStar Ltd is a premier information technology company based in Kigali, Rwanda, specializing in networking solutions with core expertise in the supply and installation of Cisco devices including servers, routers, switches, and power backup systems.</p>
-                    <p>We pride ourselves on delivering reliable, scalable, and secure IT infrastructure solutions to both government and private institutions across Rwanda.</p>
-                    
-                    <div class="about-features">
-                        <div class="feature-item animate-on-scroll">
-                            <i class="fas fa-network-wired"></i>
-                            <h4>Networking</h4>
-                            <p>Expert installation and configuration of network infrastructure</p>
-                        </div>
-                        <div class="feature-item animate-on-scroll">
-                            <i class="fas fa-server"></i>
-                            <h4>Servers</h4>
-                            <p>High-performance server solutions for all business needs</p>
-                        </div>
-                        <div class="feature-item animate-on-scroll">
-                            <i class="fas fa-shield-alt"></i>
-                            <h4>Security</h4>
-                            <p>Comprehensive IT security solutions and support</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="About IsokoStar">
-                </div>
+            <div class="about-image">
+                <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg
+" alt="Networking Team">
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="section services" id="services">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>Our Services</h2>
-                <p>Comprehensive IT solutions tailored to meet your business requirements and challenges.</p>
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://thenetworkinstallers.com/wp-content/uploads/2021/08/commercial-data-cabling.jpg" alt="Network Installation">
+                </div>
+                <div class="service-content">
+                    <h3>Network Installation</h3>
+                    <p>Professional installation of networking infrastructure including routers, switches, and cabling systems for optimal performance.</p>
+                    <a href="#contact" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="services-grid">
-                <div class="service-card animate-on-scroll">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc8628d5b90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Networking Solutions">
-                    </div>
-                    <div class="service-content">
-                        <h3>Networking Solutions</h3>
-                        <p>Design, implementation, and maintenance of robust network infrastructures using Cisco devices including routers, switches, and firewalls.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://periodicomovil.com/download/multimedia.normal.b3a2f864b640abc6.36343641364443312d443731312d343935432d383034342d34383745393432355f6e6f726d616c2e6a706567.jpeg" alt="Cisco Solutions">
                 </div>
-                <div class="service-card animate-on-scroll">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Server Installation">
-                    </div>
-                    <div class="service-content">
-                        <h3>Server Installation</h3>
-                        <p>Supply, installation, and configuration of high-performance servers for data storage, applications, and enterprise solutions.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                <div class="service-content">
+                    <h3>Cisco Solutions</h3>
+                    <p>Supply and configuration of Cisco networking devices including routers, switches, firewalls, and wireless access points.</p>
+                    <a href="#contact" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card animate-on-scroll">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="IT Support">
-                    </div>
-                    <div class="service-content">
-                        <h3>IT Support</h3>
-                        <p>Comprehensive IT support services including troubleshooting, maintenance, and technical assistance for your business.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://cheekymunkey.co.uk/wp-content/uploads/2017/11/Business-IT-pic-1.jpg" alt="IT Support">
+                </div>
+                <div class="service-content">
+                    <h3>IT Support</h3>
+                    <p>Comprehensive IT support services including troubleshooting, maintenance, and system upgrades for your business.</p>
+                    <a href="#contact" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Products Section -->
-    <section class="section products" id="products">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>Our Products</h2>
-                <p>High-quality IT equipment and networking devices from leading manufacturers.</p>
+    <section class="section" id="products">
+        <div class="section-title">
+            <h2>Our Products</h2>
+        </div>
+        <div class="products-slider">
+            <div class="slider-container" id="slider-container">
+                <div class="slide">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://www.cisco.com/c/dam/assets/support/product-images/series/switches-catalyst-9300-series-switches-alternate1.jpg" alt="Cisco Catalyst Switch">
+                        </div>
+                        <h3>Cisco Catalyst 9300 Series Switch</h3>
+                        <p>Next-generation stackable enterprise switches with advanced security and IoT capabilities.</p>
+                        <span class="price">Contact for Pricing</span>
+                        <a href="#contact" class="btn">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://th.bing.com/th/id/OIP.IRAkgHAc-5ZCXszTuJa5gAHaFZ?rs=1&pid=ImgDetMain" alt="Cisco ISR Router">
+                        </div>
+                        <h3>Cisco ISR 4000 Series Router</h3>
+                        <p>Integrated services routers with advanced security, application visibility, and WAN optimization.</p>
+                        <span class="price">Contact for Pricing</span>
+                        <a href="#contact" class="btn">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://th.bing.com/th/id/R.428183868c8f483bc4a13393d995f776?rik=goFunkfRozHmFA&riu=http%3a%2f%2fwww.bhphotovideo.com%2fimages%2fimages1000x1000%2fAPC_smc1000_Smart_UPS_C_1000VA_with_887745.jpg&ehk=g6dUTlzpIesxGSiTnSadUBR9gP05kvpg3A8%2bnSc8ceI%3d&risl=&pid=ImgRaw&r=0" alt="UPS System">
+                        </div>
+                        <h3>APC Smart-UPS Systems</h3>
+                        <p>Reliable power backup solutions with intelligent battery management for critical infrastructure.</p>
+                        <span class="price">Contact for Pricing</span>
+                        <a href="#contact" class="btn">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://www.metapoint.in/assets/upload_images/product/1629871569_5.png" alt="Cisco Firewall">
+                        </div>
+                        <h3>Cisco Firepower NGFW</h3>
+                        <p>Next-generation firewall with advanced threat protection and unified management.</p>
+                        <span class="price">Contact for Pricing</span>
+                        <a href="#contact" class="btn">Enquire Now</a>
+                    </div>
+                </div>
             </div>
-            <div class="products-container">
-                <div class="products-slider" id="productsSlider">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Cisco Router">
-                        </div>
-                        <div class="product-info">
-                            <h3>Cisco ISR 4000 Series Router</h3>
-                            <p>High-performance router for enterprise networks with advanced security features.</p>
-                            <div class="product-price">$2,500</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cisco Switch">
-                        </div>
-                        <div class="product-info">
-                            <h3>Cisco Catalyst 9000 Switch</h3>
-                            <p>Next-generation enterprise switching with intent-based networking.</p>
-                            <div class="product-price">$3,200</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Power Backup">
-                        </div>
-                        <div class="product-info">
-                            <h3>APC Smart-UPS 3000VA</h3>
-                            <p>Reliable power backup solution with voltage regulation and surge protection.</p>
-                            <div class="product-price">$1,800</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cisco Server">
-                        </div>
-                        <div class="product-info">
-                            <h3>Cisco UCS B200 M5 Server</h3>
-                            <p>Blade server with exceptional performance for data center environments.</p>
-                            <div class="product-price">$6,500</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Firewall">
-                        </div>
-                        <div class="product-info">
-                            <h3>Cisco Firepower 2100</h3>
-                            <p>Next-generation firewall with advanced threat protection capabilities.</p>
-                            <div class="product-price">$4,200</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-controls">
-                    <button class="slider-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-                    <button class="slider-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-                </div>
+            <div class="slider-nav">
+                <div class="slider-dot active" data-index="0"></div>
+                <div class="slider-dot" data-index="1"></div>
+                <div class="slider-dot" data-index="2"></div>
+                <div class="slider-dot" data-index="3"></div>
             </div>
         </div>
     </section>
 
     <!-- Clients Section -->
     <section class="section clients">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>Our Clients</h2>
-                <p>We are proud to serve these prestigious institutions and many more.</p>
+        <div class="section-title">
+            <h2>Our Clients</h2>
+        </div>
+        <div class="clients-grid">
+            <div class="client-logo">
+                <img src="https://rdb.rw/wp-content/uploads/2022/12/rdb-251X55.jpg" alt="Rwanda Development Board">
             </div>
-            <div class="clients-grid">
-                <img src="https://via.placeholder.com/150x80?text=Government" alt="Government Institution" class="client-logo animate-on-scroll">
-                <img src="https://via.placeholder.com/150x80?text=Bank" alt="Bank" class="client-logo animate-on-scroll">
-                <img src="https://via.placeholder.com/150x80?text=University" alt="University" class="client-logo animate-on-scroll">
-                <img src="https://via.placeholder.com/150x80?text=Hospital" alt="Hospital" class="client-logo animate-on-scroll">
-                <img src="https://via.placeholder.com/150x80?text=Corporate" alt="Corporate" class="client-logo animate-on-scroll">
+            <div class="client-logo">
+                <img src="https://www.minict.gov.rw/index.php?eID=dumpFile&t=f&f=1141&token=688d2042f97d54e42e581d5d7b0f29b4295d2500" alt="Ministry of ICT Rwanda">
+            </div>
+            <div class="client-logo">
+                <img src="data:image/png;base64,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" alt="Bank of Kigali">
+            </div>
+            <div class="client-logo">
+                <img src="https://ur.ac.rw/images/University%20of%20Rwanda%20-%20LOGO%20LANDSCAPE%20_RV%20Official.png" alt="University of Rwanda">
+            </div>
+            <div class="client-logo">
+                <img src="https://www.rwandair.com/dist/phoenix/V1.0/img/logo.svg" alt="RwandaAir">
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="section" id="contact">
-        <div class="container">
-            <div class="section-title animate-on-scroll">
-                <h2>Contact Us</h2>
-                <p>Get in touch with our team for all your IT and networking needs.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info animate-on-scroll">
-                    <h3>Let's Talk About Your Project</h3>
-                    <p>We're here to help you with all your IT infrastructure needs. Whether you need networking solutions, server installation, or ongoing IT support, our team is ready to assist you.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
-                            <div class="contact-text">
-                                <h4>Address</h4>
-                                <p>KN 4 Ave, Kigali, Rwanda</p>
-                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <a href="mailto:info@isokostar.com">info@isokostar.com</a><br>
-                                <a href="mailto:support@isokostar.com">support@isokostar.com</a>
-                            </div>
+                        <div class="contact-text">
+                            <h4>Our Location</h4>
+                            <p>Kigali, Rwanda</p>
                         </div>
-                        <div class="contact-item">
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
-                            <div class="contact-text">
-                                <h4>Phone</h4>
-                                <a href="tel:+250788123456">+250 788 123 456</a>
-                            </div>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+250788645226">+250 788 645 226</a></p>
                         </div>
                     </div>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:info@isokostar.com">info@isokostar.com</a></p>
+                            <p><a href="mailto:support@isokostar.com">support@isokostar.com</a></p>
+                            <p><a href="mailto:connect@isokostar.com">connect@isokostar.com</a></p>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-form animate-on-scroll">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-                    </form>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>About IsokoStar</h3>
-                    <p>Leading IT company in Rwanda specializing in networking solutions, Cisco devices, servers, and power backup systems for government and private institutions.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Network Installation</a></li>
-                        <li><a href="#">Server Configuration</a></li>
-                        <li><a href="#">IT Support</a></li>
-                        <li><a href="#">Power Backup Solutions</a></li>
-                        <li><a href="#">Cisco Device Supply</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your Email" required>
-                        <button type="submit" class="btn">Subscribe</button>
-                    </form>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>IsokoStar Ltd</h3>
+                <p>Your trusted partner for networking solutions and IT infrastructure in Rwanda. We specialize in Cisco devices and comprehensive IT services.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 IsokoStar Ltd. All Rights Reserved. | Designed by <i class="" style="color: #ff6b00;"><a href="https://kigalicoding.com/">kigalicoding.com</a></i></p></a>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Network Installation</a></li>
+                    <li><a href="#">Cisco Solutions</a></li>
+                    <li><a href="#">IT Support</a></li>
+                    <li><a href="#">Power Backup Systems</a></li>
+                    <li><a href="#">Government IT Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</p>
+                <p><i class="fas fa-phone-alt"></i> +250 788 645 226</p>
+                <p><i class="fas fa-envelope"></i> info@isokostar.com</p>
+                <p><i class="fas fa-globe"></i> www.isokostar.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 IsokoStar Ltd. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <div class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-
     <script>
         // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const nav = document.getElementById('nav');
-        
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mainNav = document.getElementById('main-nav');
+
         mobileMenuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#nav ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-        // Header scroll effect
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Back to top button
-        const backToTopBtn = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('active');
-            } else {
-                backToTopBtn.classList.remove('active');
-            }
-        });
-        
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Product Slider
-        const slider = document.getElementById('productsSlider');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const productCards = document.querySelectorAll('.product-card');
-        const cardWidth = productCards[0].offsetWidth + 30; // width + margin
-        let currentPosition = 0;
-        const maxPosition = -(cardWidth * (productCards.length - 3));
-        
-        nextBtn.addEventListener('click', () => {
-            if (currentPosition > maxPosition) {
-                currentPosition -= cardWidth;
-                slider.style.transform = `translateX(${currentPosition}px)`;
-            }
-        });
-        
-        prevBtn.addEventListener('click', () => {
-            if (currentPosition < 0) {
-                currentPosition += cardWidth;
-                slider.style.transform = `translateX(${currentPosition}px)`;
-            }
-        });
-        
-        // Animation on scroll
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-        
-        const animateOnScroll = () => {
-            animateElements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
                 
-                if (elementPosition < windowHeight - 100) {
-                    element.classList.add('animated');
+                if (this.getAttribute('href') === '#') return;
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
                 }
             });
-        };
-        
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
-        
-        // Form submission
+        });
+
+        // Product Slider
+        const sliderContainer = document.getElementById('slider-container');
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentIndex = 0;
+        const slideCount = slides.length;
+
+        function updateSlider() {
+            sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        // Dot navigation
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.getAttribute('data-index'));
+                updateSlider();
+            });
+        });
+
+        // Auto slide
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slideCount;
+            updateSlider();
+        }, 5000);
+
+        // Form Submission
         const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Here you would typically send the form data to a server
+                // For demo purposes, we'll just show an alert
+                alert(`Thank you, ${name}! Your message has been received. We will contact you soon at ${email}.`);
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+
+        // Sticky Header on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
         });
     </script>
 </body>
